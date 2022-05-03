@@ -32,7 +32,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("YukkiMusic").error(
+        LOGGER("forgermusic").error(
             "No Assistant Clients Vars Defined!.. Exiting Process."
         )
         return
@@ -54,7 +54,7 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("YukkiMusic.plugins" + all_module)
+        importlib.import_module("forger.plugins" + all_module)
     LOGGER("Forgermusic.plugins").info(
         "Successfully Imported Modules "
     )
